@@ -1,0 +1,23 @@
+
+<%= form_with model: @post do |form| %>
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+
+    <%= form.label :short_description %>
+    <%= form.text_field :short_description %>
+
+    <%= form.label :image %>
+    <%= form.text_field :image %>
+
+    <%= form.label :slug %>
+    <%= form.text_field :slug %>
+
+    <div class="field">
+      <%= form.label :body %>
+      <%= form.rich_text_area :body %>
+    </div>
+
+    <%= form.submit %>
+  </div>
+<% end %>

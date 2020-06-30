@@ -18,5 +18,6 @@ require("channels")
 
 import "controllers"
 
-require("trix")
+// require("trix")
+// import '../css/trix/trix.css'
 require("@rails/actiontext")
