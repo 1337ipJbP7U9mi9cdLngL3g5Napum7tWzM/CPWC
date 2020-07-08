@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   root 'splashpages#index'
 
   resources :contacts,  only: [:index, :new, :create, :destroy]

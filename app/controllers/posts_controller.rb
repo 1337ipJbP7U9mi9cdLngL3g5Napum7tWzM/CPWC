@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :admin, only: [:edit, :update, :new, :create]
 
   def index
     @posts = Post.all
@@ -8,6 +9,8 @@ class PostsController < ApplicationController
     @post = Post.friendly.find(params[:id])
     @title = @post.title
     @image = @post.image
+    @url = "https://www.cryptopaperwalletschecker.com/posts/#{@post.slug}"
+    @shortDescription = @post.short_description
   end
 
   def new
