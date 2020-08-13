@@ -9,5 +9,5 @@ it is for totals on cpwc-addresses totals.
 
 
 Possible qr-readers, need it to work for IOS safari for PWA:
-https://github.com/mebjas/html5-qrcode
+https://github.com/mebjas/html5-qrcode  # used this
 https://github.com/nimiq/qr-scanner
