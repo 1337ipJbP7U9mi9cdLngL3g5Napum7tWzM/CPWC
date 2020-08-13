@@ -1,13 +1,10 @@
 import { Controller } from "stimulus"
 import { saveAs } from 'file-saver';
-// import { blob } from 'blob'
-
 
 export default class extends Controller {
   // static targets = [ "output" ]
 
   connect() {
-    console.log('im here')
   }
 
   createCsv(event) {

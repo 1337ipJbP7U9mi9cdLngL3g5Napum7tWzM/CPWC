@@ -106,7 +106,7 @@ class CpwcAddresses extends LitElement {
 
   // Button click to add Address
   submitAddress() {
-    const address = this.shadowRoot.getElementById('input-address');
+    const address = document.getElementById('input-address');
     this.addAddress(address.value.trim());
     // address.value = '';
   }
@@ -114,7 +114,7 @@ class CpwcAddresses extends LitElement {
   // Enter key to add address
   onEnter(e) {
     if(e.key === 'Enter') {
-      const address = this.shadowRoot.getElementById('input-address');
+      const address = document.getElementById('input-address');
       this.addAddress(address.value.trim());
       // address.value = '';
     }
@@ -124,7 +124,7 @@ class CpwcAddresses extends LitElement {
     const valid = this.checkValidAddress(address)
     if(valid) {
       this.addresses = [... this.addresses, {address: address}];
-      this.shadowRoot.getElementById('input-address').value = '';
+      document.getElementById('input-address').value = '';
     }
   }
 
@@ -173,9 +173,7 @@ class CpwcAddresses extends LitElement {
       return 0;
     }
 
-
     /// Maybe to fixed for certain currencies like fiat ones?
-
     const addresses = this.addresses
     const newAddresses = []
     addresses.map((address) => {
@@ -183,6 +181,10 @@ class CpwcAddresses extends LitElement {
       newAddresses.push(address)
     })
     this.addresses = newAddresses
+  }
+
+  createRenderRoot() {
+    return this;
   }
 
 }
