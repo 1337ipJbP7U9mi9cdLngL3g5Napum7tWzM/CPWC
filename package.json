@@ -1,0 +1,31 @@
+{
+  "name": "CPWC",
+  "private": true,
+  "dependencies": {
+    "@material/mwc-button": "^0.17.2",
+    "@material/mwc-list": "^0.17.2",
+    "@material/mwc-select": "^0.17.2",
+    "@rails/actioncable": "^6.0.0-alpha",
+    "@rails/actiontext": "^6.0.3-2",
+    "@rails/activestorage": "^6.0.0-alpha",
+    "@rails/ujs": "^6.0.0-alpha",
+    "@rails/webpacker": "4.2.2",
+    "@swyftx/api-crypto-address-validator": "^1.13.1",
+    "@webcomponents/webcomponentsjs": "^2.4.4",
+    "axios": "^0.19.2",
+    "blob.js": "^1.0.1",
+    "file-loader": "^6.0.0",
+    "file-saver": "^2.0.2",
+    "html5-qrcode": "^1.1.9",
+    "lit-element": "^2.3.1",
+    "qr-scanner": "^1.2.0",
+    "stimulus": "^1.1.1",
+    "trix": "^1.2.0",
+    "turbolinks": "^5.2.0",
+    "webcomponent-qr-code": "^1.0.5"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.0"
+  }
+}

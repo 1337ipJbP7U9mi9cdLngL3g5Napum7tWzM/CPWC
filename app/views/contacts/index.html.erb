@@ -1,0 +1,19 @@
+<%= link_to 'Destroy All', contacts_destroy_all_path(),
+            # method: :delete,
+            data: { confirm: 'Are you sure?' } %>
+
+<% @contacts.each do |contact| %>
+  <p>
+    <%= contact.created_at %>
+  </p>
+  <p>
+    <%= contact.body %>
+  </p>
+  <p>
+    <%= contact.email %>
+  </p>
+  <%= link_to 'Destroy', contact_path(contact),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+  <br>
+<% end %>

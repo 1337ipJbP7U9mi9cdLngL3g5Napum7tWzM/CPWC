@@ -1,0 +1,19 @@
+<%= form_for :contact, url: contacts_path do |f| %>
+  <div id="contact">
+    <div class="contact_form">
+      <p>
+        <%= f.label :email %><br>
+        <%= f.text_field :email, class: "form-control" %>
+      </p>
+
+      <p id="contact-text">
+        <%= f.label :body, "Message" %><br>
+        <%= f.text_area :body, class: "form-control contact-form" %>
+      </p>
+
+      <p class="text-center">
+        <%= f.submit "Contact Me", class: "btn btn-contact" %>
+      </p>
+    </div>
+  </div>
+<% end %>
