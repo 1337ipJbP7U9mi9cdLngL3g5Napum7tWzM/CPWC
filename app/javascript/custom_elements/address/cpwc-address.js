@@ -11,39 +11,20 @@ class CpwcAddress extends LitElement {
     }
   }
 
-  // static get styles() {
-  //   return {
-  //
-  //   }
-  // }
-
-  // constructor() {
-  //   super();
-  //   this.name = 'Hello World';
-  // }
-
   render() {
     return html`
-      <div>
-        <span @click="${this.addressChange}">${this.address}</span>
-        <span>${this.crypto_amount}</span>
-        <span>${this.fiat_amount}</span>
+      <div class="address">
+        <span class="address__address">${this.address}</span>
+        <span class="address__crypto">${this.crypto_amount}</span>
+        <span class="address__crypto">${this.fiat_amount}</span>
         <button>Remove me</button>
       </div>
     `;
   }
 
-  // addressChange() {
-  //   let test_event = new CustomEvent('test-event', {
-  //
-  //     detail: {
-  //       message: 'testing event'
-  //     },
-  //     bubbles: true,
-  //     composed: true
-  //   });
-  //   this.dispatchEvent(test_event);
-  // }
+  createRenderRoot() {
+    return this;
+  }
 
 }
 

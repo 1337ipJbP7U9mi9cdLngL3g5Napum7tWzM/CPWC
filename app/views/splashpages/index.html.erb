@@ -3,22 +3,23 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Material+Icons&display=block" rel="stylesheet">
 
-<main class="grid">
-  <script src="./html5-qrcode.min.js"></script>
+<div class="app">
 
-  <!-- <div id="reader" width="600px" data-controller="qrcode-reader">
+<header class="header">
+
+</header>
+
+<main class="main">
+  <!-- <script src="./html5-qrcode.min.js"></script>
+  <div id="reader" width="600px" data-controller="qrcode-reader">
     <button type="button" name="button" data-action="click->qrcode-reader#startQrCode">
       Boobs
     </button>
   </div> -->
+
   <!-- <qr-code data="hello world!" data-controller="qr-code-generator"></qr-code> -->
-  <section class="dropdowns">
-    <cpwc-crypto-dropdowns>
-    </cpwc-crypto-dropdowns>
-  </section>
-  <section class="inputs">
-    <cpwc-addresses>
-    </cpwc-addresses>
+
+  <!-- <div class="csv">
     <div class="csv__reader" data-controller="csv-reader">
       Load Spreadsheet<input class="hidden" type="file" id="csvFileInput" data-action="change->csv-reader#handleFiles" accept=".csv">
     </div>
@@ -26,14 +27,16 @@
       <a href="#" class="export" data-action="click->csv-generator#createCsv">
         <button class="btn btn-primary btn-lg">Export Spreadsheet</button></a>
     </div>
-  </section>
-
-
-  <!-- <div class="one">
-
-  </div>-->
-  <!-- <div class="two">
-
   </div> -->
 
+  <section class="dropdowns">
+    <cpwc-crypto-dropdowns>
+    </cpwc-crypto-dropdowns>
+  </section>
+  <section class="inputs">
+    <cpwc-addresses>
+    </cpwc-addresses>
+  </section>
 </main>
+
+</div>

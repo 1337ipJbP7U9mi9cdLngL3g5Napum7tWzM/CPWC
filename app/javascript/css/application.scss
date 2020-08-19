@@ -10,7 +10,7 @@ $lime-green: #31cb00ff;
 $tea-green: #d4e6b5ff;
 $maximum-green-yellow: #e6f14aff;
 
-html, body, .grid{
+html, body {
   height: 100%;
   width: 100%;
   background-color: $rich-black-fogra-29;
@@ -28,11 +28,11 @@ html, body, .grid{
   justify-self: center;
 }
 
-.grid {
+.main {
   display: grid;
   grid-template-areas:
   ". dropdowns ."
-  ". inputs .";
+  "inputs inputs inputs";
 }
 
 a {

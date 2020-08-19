@@ -1,17 +1,49 @@
+.app {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "main   main   main";
+  grid-template-rows: auto 1fr;
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
 .inputs {
   width: 100%;
 }
 
-#input-address {
+.input-addresses {
   display: grid;
   grid-template-areas:
   "check input enter";
 
   .check-address {
     grid-area: check;
+    justify-self: right;
   }
 
   .enter-address {
     grid-area: enter;
   }
+}
+
+.address-totals {
+  justify-self: center;
+}
+
+#addresses {
+  display: grid;
+  justify-content: center;
+}
+
+.address {
+  display: grid;
+  grid-template-areas: "address crypto fiat remove";
+  grid-template-rows: auto 1fr 1fr 1fr;
 }

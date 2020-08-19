@@ -20,7 +20,7 @@ class CpwcAddresses extends LitElement {
     let totalTemplate = ''
     this.checkedBalanceState === "true" ?
       totalTemplate = html `
-        <div>
+        <div class="address-totals">
           <span>Addresses: ${this.totalAddresses()}</span>
           <span>Crypto Amount: ${this.totalCryptoAmount()}</span>
           <span>Fiat Amount: ${this.totalFiatAmount()}</span>
@@ -29,7 +29,7 @@ class CpwcAddresses extends LitElement {
       `
       :
       totalTemplate = html `
-        <div>
+        <div class="address-totals">
           <span>Addresses: ${this.totalAddresses()}</span>
           <span>Crypto Amount: </span>
           <span>Fiat Amount: </span>
@@ -58,16 +58,20 @@ class CpwcAddresses extends LitElement {
 
   render() {
     return html`
-      <div @keyup=${this.onEnter} data-controller="api" id="input-address">
-        <button type="button" name="check" data-action="click->api#submitAddress"
-          class="check-address">
-        Check Address
-        </button>
+      <div @keyup=${this.onEnter} data-controller="api" class="input-addresses">
+        <span class="check-address">
+          <button type="button" name="check" data-action="click->api#submitAddress"
+            class="check-address">
+            Check Address
+          </button>
+        </span>
         <input
           type="text"
+          id="input-address"
           plaveholder="Please input Public Address"></input>
-        <button @click=${this.submitAddress} type="button" name="enter"
-          class="enter-address">Enter Address</button>
+        <span class="enter-address">
+          <button @click=${this.submitAddress} type="button" name="enter">Enter Address</button>
+        </span>
       </div>
       <div id="addresses">
         ${this.totalsOnChecked()}
@@ -111,7 +115,6 @@ class CpwcAddresses extends LitElement {
   submitAddress() {
     const address = document.getElementById('input-address');
     this.addAddress(address.value.trim());
-    // address.value = '';
   }
 
   // Enter key to add address
@@ -119,7 +122,6 @@ class CpwcAddresses extends LitElement {
     if(e.key === 'Enter') {
       const address = document.getElementById('input-address');
       this.addAddress(address.value.trim());
-      // address.value = '';
     }
   }
 
