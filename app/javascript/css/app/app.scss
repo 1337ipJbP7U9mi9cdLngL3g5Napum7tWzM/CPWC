@@ -1,0 +1,17 @@
+.inputs {
+  width: 100%;
+}
+
+#input-address {
+  display: grid;
+  grid-template-areas:
+  "check input enter";
+
+  .check-address {
+    grid-area: check;
+  }
+
+  .enter-address {
+    grid-area: enter;
+  }
+}

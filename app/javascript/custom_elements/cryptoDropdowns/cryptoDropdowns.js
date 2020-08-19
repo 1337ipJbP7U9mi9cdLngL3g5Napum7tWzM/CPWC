@@ -88,7 +88,7 @@ class CpwcCryptoDropdowns extends LitElement {
         <mwc-select label="Currency" id="currency" @action=${this.currencySelected}>
           ${this.currencyDropdown()}
         </mwc-select>
-      <div>Value: <span id="preselectedValue"></span></div>
+      <!-- <div>Value: <span id="preselectedValue"></span></div> -->
       </div>
     `
   }

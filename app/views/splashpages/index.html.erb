@@ -3,39 +3,37 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Material+Icons&display=block" rel="stylesheet">
 
-
-<main>
+<main class="grid">
   <script src="./html5-qrcode.min.js"></script>
-  <!-- <script src="https://raw.githubusercontent.com/mebjas/html5-qrcode/master/minified/html5-qrcode.min.js"></script> -->
-  <div id="reader" width="600px" data-controller="qrcode-reader">
+
+  <!-- <div id="reader" width="600px" data-controller="qrcode-reader">
     <button type="button" name="button" data-action="click->qrcode-reader#startQrCode">
       Boobs
     </button>
-  </div>
-  <br>
-  <br>
-  <qr-code data="hello world!" data-controller="qr-code-generator"></qr-code>
-  <br>
-  <br>
-  <div class="" data-controller="csv-reader">
-    Load Spreadsheet<input class="hidden" type="file" id="csvFileInput" data-action="change->csv-reader#handleFiles" accept=".csv">
-  </div>
-  <div class="" data-controller="csv-generator">
-    <a href="#" class="export" data-action="click->csv-generator#createCsv"><button class="btn btn-primary btn-lg">Export Spreadsheet</button></a><br />
+  </div> -->
+  <!-- <qr-code data="hello world!" data-controller="qr-code-generator"></qr-code> -->
+  <section class="dropdowns">
+    <cpwc-crypto-dropdowns>
+    </cpwc-crypto-dropdowns>
+  </section>
+  <section class="inputs">
+    <cpwc-addresses>
+    </cpwc-addresses>
+    <div class="csv__reader" data-controller="csv-reader">
+      Load Spreadsheet<input class="hidden" type="file" id="csvFileInput" data-action="change->csv-reader#handleFiles" accept=".csv">
+    </div>
+    <div class="csv__generator" data-controller="csv-generator">
+      <a href="#" class="export" data-action="click->csv-generator#createCsv">
+        <button class="btn btn-primary btn-lg">Export Spreadsheet</button></a>
+    </div>
+  </section>
 
-  </div>
-  <br>
-  <br>
-  <cpwc-crypto-dropdowns>
-  </cpwc-crypto-dropdowns>
 
-  <div class="" id="api-controller" data-controller="api">
-    <button type="button" name="button" data-action="click->api#submitAddress">
-      Submit Address
-    </button>
+  <!-- <div class="one">
 
-  </div>
+  </div>-->
+  <!-- <div class="two">
 
-  <cpwc-addresses>
-  </cpwc-addresses>
+  </div> -->
+
 </main>

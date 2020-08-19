@@ -1,0 +1,40 @@
+@import 'normalize.css';
+
+
+// Color scheme:
+/* SCSS HEX */
+$rich-black-fogra-29: #141a1eff;
+$pakistan-green: #2a7221ff;
+$slimy-green: #119822ff;
+$lime-green: #31cb00ff;
+$tea-green: #d4e6b5ff;
+$maximum-green-yellow: #e6f14aff;
+
+html, body, .grid{
+  height: 100%;
+  width: 100%;
+  background-color: $rich-black-fogra-29;
+  color: $maximum-green-yellow;
+}
+
+.dropdowns {
+  grid-area: dropdowns;
+  justify-self: center;
+  align-self: center;
+}
+
+.inputs {
+  grid-area: inputs;
+  justify-self: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:
+  ". dropdowns ."
+  ". inputs .";
+}
+
+a {
+  text-decoration: none;
+}

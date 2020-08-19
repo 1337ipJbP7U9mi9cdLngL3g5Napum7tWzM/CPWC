@@ -1,5 +1,4 @@
 import { LitElement, html } from 'lit-element';
-import { nothing } from 'lit-html';
 import walletAddressValidatorMinJs from '@swyftx/api-crypto-address-validator/dist/wallet-address-validator.min.js';
 
 class CpwcAddresses extends LitElement {
@@ -59,14 +58,18 @@ class CpwcAddresses extends LitElement {
 
   render() {
     return html`
-      <div @keyup=${this.onEnter}>
-          <input
-            type="text"
-            id="input-address"
-            plaveholder="Please input Public Address"></input>
-          <button @click=${this.submitAddress}>Enter Address</button>
+      <div @keyup=${this.onEnter} data-controller="api" id="input-address">
+        <button type="button" name="check" data-action="click->api#submitAddress"
+          class="check-address">
+        Check Address
+        </button>
+        <input
+          type="text"
+          plaveholder="Please input Public Address"></input>
+        <button @click=${this.submitAddress} type="button" name="enter"
+          class="enter-address">Enter Address</button>
       </div>
-      <div>
+      <div id="addresses">
         ${this.totalsOnChecked()}
         ${this.addresses.map(address =>
           this.checkedAddress(address)
