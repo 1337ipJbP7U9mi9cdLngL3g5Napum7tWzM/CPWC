@@ -1,3 +1,15 @@
+@import 'dropdowns.scss';
+
+$rich-black-fogra-29: #141a1eff;
+$pakistan-green: #2a7221ff;
+$slimy-green: #119822ff;
+$lime-green: #31cb00ff;
+$tea-green: #d4e6b5ff;
+$maximum-green-yellow: #e6f14aff;
+
+$light-grey: #2d2d2d;
+
+
 .app {
   display: grid;
   grid-template-areas:
@@ -12,10 +24,22 @@
 
 .main {
   grid-area: main;
+  display: grid;
+  grid-template-areas:
+  ". dropdowns ."
+  "inputs inputs inputs";
+}
+
+.dropdowns {
+  grid-area: dropdowns;
+  justify-self: center;
+  align-self: center;
 }
 
 .inputs {
   width: 100%;
+  grid-area: inputs;
+  justify-self: center;
 }
 
 .input-addresses {
@@ -45,5 +69,5 @@
 .address {
   display: grid;
   grid-template-areas: "address crypto fiat remove";
-  grid-template-rows: auto 1fr 1fr 1fr;
+  grid-template-columns: auto 1fr 1fr 1fr;
 }

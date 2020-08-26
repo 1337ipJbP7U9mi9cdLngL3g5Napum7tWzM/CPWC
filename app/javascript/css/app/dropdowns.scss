@@ -1,0 +1,32 @@
+$rich-black-fogra-29: #141a1eff;
+$pakistan-green: #2a7221ff;
+$slimy-green: #119822ff;
+$lime-green: #31cb00ff;
+$tea-green: #d4e6b5ff;
+$maximum-green-yellow: #e6f14aff;
+
+$light-grey: #2d2d2d;
+
+.dropdowns {
+  margin: 30px 0 30px 0;
+}
+
+#crypto {
+  --mdc-theme-primary: #d4e6b5ff;
+  --mdc-select-outlined-hover-border-color: rgba(0, 0, 255, 0.87);
+  --mdc-select-outlined-idle-border-color: #d4e6b5ff;
+  --mdc-theme-primary: #d4e6b5ff;
+  --mdc-select-fill-color: #141a1eff;
+  --mdc-select-label-ink-color: white;
+  --mdc-select-dropdown-icon-color: #e6f14aff;
+  --mdc-select-idle-line-color: #e6f14aff;
+  --mdc-select-hover-line-color: #e6f14aff;
+  --mdc-theme-surface: #2d2d2d;
+  --mdc-select-ink-color: #e6f14aff;
+  --mdc-theme-text-primary-on-background: #d4e6b5ff;
+
+  --mdc-menu-item-height: 30px;
+
+  --mdc-list-vertical-padding: 0px;
+  --mdc-list-side-padding: 30px;
+}

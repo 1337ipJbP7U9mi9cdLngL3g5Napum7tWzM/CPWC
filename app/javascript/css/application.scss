@@ -17,24 +17,6 @@ html, body {
   color: $maximum-green-yellow;
 }
 
-.dropdowns {
-  grid-area: dropdowns;
-  justify-self: center;
-  align-self: center;
-}
-
-.inputs {
-  grid-area: inputs;
-  justify-self: center;
-}
-
-.main {
-  display: grid;
-  grid-template-areas:
-  ". dropdowns ."
-  "inputs inputs inputs";
-}
-
 a {
   text-decoration: none;
 }
