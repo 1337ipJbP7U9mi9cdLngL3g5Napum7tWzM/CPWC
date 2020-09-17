@@ -23,7 +23,8 @@
     "stimulus": "^1.1.1",
     "trix": "^1.2.0",
     "turbolinks": "^5.2.0",
-    "webcomponent-qr-code": "^1.0.5"
+    "webcomponent-qr-code": "^1.0.5",
+    "workbox-webpack-plugin": "^5.1.4"
   },
   "version": "0.1.0",
   "devDependencies": {

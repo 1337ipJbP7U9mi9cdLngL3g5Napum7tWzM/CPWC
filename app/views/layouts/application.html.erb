@@ -2,7 +2,6 @@
 <html>
   <head>
     <title><%= (@title + " - Crypto Paper Wallets Checker" if @title) || "Crypto Paper Wallets Checker"  %> </title>
-    <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%# stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,41 +9,49 @@
     <%= javascript_pack_tag 'application' %>
 
     <% if @title %>
-      <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": "<%= @title %>",
-          "author": "The Crypto Enthusiast",
-          <% if @image %>
-          "image": "https://www.cryptopaperwalletschecker.com<%= asset_pack_path 'media/images/' + @image %>",
-          <% end %>
-          "genre": "digital business",
-          "datePublished": "<%= @publication_date %>",
-          "dateModified": "<%= @date_modified %>",
-          "publisher": {
-            "@type": "Organization",
-            "name": "Crypto Paper Wallets Checker",
-          },
-          "url": "<%= @url %>",
-          "description": "<%= @shortDescription %>"
-        }
-      </script>
-      <meta name="description" content="<%= @twitterDescription %>">
-    <% else %>
-      <script type="application/ld+json">
-        {
-          "@context": "http://schema.org",
-          "@type": "WebPage",
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "<%= @title %>",
+        "author": "The Crypto Enthusiast",
+        <% if @image %>
+        "image": "https://www.cryptopaperwalletschecker.com<%= asset_pack_path 'media/images/' + @image %>",
+        <% end %>
+        "genre": "digital business",
+        "datePublished": "<%= @publication_date %>",
+        "dateModified": "<%= @date_modified %>",
+        "publisher": {
+          "@type": "Organization",
           "name": "Crypto Paper Wallets Checker",
-          "description": "A web and mobile app for safely and easily checking your paper wallet balance plus related articles on crypto currency."
-        }
-      </script>
-      <meta name="description" content="A web and mobile app for safely and easily checking your paper wallet balance plus related articles on crypto currency.">
+        },
+        "url": "<%= @url %>",
+        "description": "<%= @shortDescription %>"
+      }
+    </script>
+    <meta name="description" content="<%= @twitterDescription %>">
+    <% else %>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebPage",
+        "name": "Crypto Paper Wallets Checker",
+        "description": "A web and mobile app for safely and easily checking your paper wallet balance plus related articles on crypto currency."
+      }
+    </script>
+    <meta name="description" content="A web and mobile app for safely and easily checking your paper wallet balance plus related articles on crypto currency.">
     <% end %>
 
+    <script>
+      // Check that service workers are supported
+      if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js');
+        });
+      }
+    </script>
   </head>
-
   <body>
     <%= yield %>
   </body>

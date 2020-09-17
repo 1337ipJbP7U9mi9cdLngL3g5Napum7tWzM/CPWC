@@ -13,16 +13,36 @@ $light-grey: #2d2d2d;
 
 #crypto {
   --mdc-theme-primary: #d4e6b5ff;
-  --mdc-select-outlined-hover-border-color: rgba(0, 0, 255, 0.87);
+  --mdc-select-outlined-hover-border-color: #fff;
   --mdc-select-outlined-idle-border-color: #d4e6b5ff;
   --mdc-theme-primary: #d4e6b5ff;
   --mdc-select-fill-color: #141a1eff;
-  --mdc-select-label-ink-color: white;
-  --mdc-select-dropdown-icon-color: #e6f14aff;
-  --mdc-select-idle-line-color: #e6f14aff;
-  --mdc-select-hover-line-color: #e6f14aff;
+  --mdc-select-label-ink-color: #fff;
+  --mdc-select-dropdown-icon-color: #fff;
+  --mdc-select-idle-line-color: #fff;
+  --mdc-select-hover-line-color: #fff;
   --mdc-theme-surface: #2d2d2d;
-  --mdc-select-ink-color: #e6f14aff;
+  --mdc-select-ink-color: #fff;
+  --mdc-theme-text-primary-on-background: #d4e6b5ff;
+
+  --mdc-menu-item-height: 30px;
+
+  --mdc-list-vertical-padding: 0px;
+  --mdc-list-side-padding: 30px;
+}
+
+#currency {
+  --mdc-theme-primary: #d4e6b5ff;
+  --mdc-select-outlined-hover-border-color: #fff;
+  --mdc-select-outlined-idle-border-color: #d4e6b5ff;
+  --mdc-theme-primary: #d4e6b5ff;
+  --mdc-select-fill-color: #141a1eff;
+  --mdc-select-label-ink-color: #fff;
+  --mdc-select-dropdown-icon-color: #fff;
+  --mdc-select-idle-line-color: #fff;
+  --mdc-select-hover-line-color: #fff;
+  --mdc-theme-surface: #2d2d2d;
+  --mdc-select-ink-color: #fff;
   --mdc-theme-text-primary-on-background: #d4e6b5ff;
 
   --mdc-menu-item-height: 30px;

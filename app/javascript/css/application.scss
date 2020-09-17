@@ -1,5 +1,6 @@
 @import 'normalize.css';
-
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow&display=swap');
+// font-family: 'Tomorrow', sans-serif;
 
 // Color scheme:
 /* SCSS HEX */
@@ -14,7 +15,8 @@ html, body {
   height: 100%;
   width: 100%;
   background-color: $rich-black-fogra-29;
-  color: $maximum-green-yellow;
+  color: #fff;
+  font-family: 'Tomorrow', sans-serif;
 }
 
 a {

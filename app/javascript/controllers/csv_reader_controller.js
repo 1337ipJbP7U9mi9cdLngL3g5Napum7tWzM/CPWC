@@ -3,9 +3,13 @@ import walletAddressValidatorMinJs from '@swyftx/api-crypto-address-validator/di
 
 
 export default class extends Controller {
-  // static targets = [ "output" ]
+  static targets = [ "input" ]
 
   connect() {
+  }
+
+  inputCsv(evt) {
+    this.inputTarget.click();
   }
 
   handleFiles(evt) {
@@ -53,7 +57,6 @@ export default class extends Controller {
   }
 
   drawOutput(lines){
-    console.log(lines)
   	for (var i = 0; i < lines.length; i++) {
       	for (var j = 0; j < lines[i].length; j++) {
       		var address_text_to_check = lines[i][j].replace(/['"]+/g, '');

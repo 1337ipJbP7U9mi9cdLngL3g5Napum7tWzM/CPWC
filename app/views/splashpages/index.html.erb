@@ -6,7 +6,28 @@
 <div class="app">
 
 <header class="header">
-
+  <div class="logo">
+    <div class="logo-image"></div>
+    <h1>CryptocurrenciesChecker</h1>
+  </div>
+  <div class="nav">
+    <div class="spreadsheet">
+      <h4>Speadsheet</h4>
+      <div class="csv__reader" data-controller="csv-reader">
+        <button class="btn" data-action="click->csv-reader#inputCsv">Load</button>
+        <input class="hidden" type="file" id="csvFileInput"
+          data-target="csv-reader.input"
+          data-action="change->csv-reader#handleFiles" accept=".csv">
+      </div>
+      <div class="csv__generator" data-controller="csv-generator">
+        <a href="#" class="export" data-action="click->csv-generator#createCsv">
+          <button class="btn btn-primary btn-lg">Export</button></a>
+      </div>
+    </div>
+    <div class="blog">
+      <a href="#">Blog</a>
+    </div>
+  </div>
 </header>
 
 <main class="main">
@@ -18,16 +39,6 @@
   </div> -->
 
   <!-- <qr-code data="hello world!" data-controller="qr-code-generator"></qr-code> -->
-
-  <!-- <div class="csv">
-    <div class="csv__reader" data-controller="csv-reader">
-      Load Spreadsheet<input class="hidden" type="file" id="csvFileInput" data-action="change->csv-reader#handleFiles" accept=".csv">
-    </div>
-    <div class="csv__generator" data-controller="csv-generator">
-      <a href="#" class="export" data-action="click->csv-generator#createCsv">
-        <button class="btn btn-primary btn-lg">Export Spreadsheet</button></a>
-    </div>
-  </div> -->
 
   <section class="dropdowns">
     <cpwc-crypto-dropdowns>
