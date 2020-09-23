@@ -65,7 +65,7 @@ $light-grey: #2d2d2d;
   display: grid;
   justify-self: center;
   margin-bottom: 1.5em;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   justify-items: center;
   padding: 0 2em;
 }
@@ -77,7 +77,7 @@ $light-grey: #2d2d2d;
 .address {
   display: grid;
   grid-template-areas: "address crypto fiat remove";
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   padding: 0 2em;
 
   hr {

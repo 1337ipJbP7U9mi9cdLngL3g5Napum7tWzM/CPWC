@@ -17,7 +17,7 @@ class CpwcAddress extends LitElement {
         <span class="address__address">${this.address}</span>
         <span class="address__crypto">${this.crypto_amount}</span>
         <span class="address__crypto">${this.fiat_amount}</span>
-        <span>Remove me</span>
+        <span>Remove</span>
         <hr>
       </div>
     `;
