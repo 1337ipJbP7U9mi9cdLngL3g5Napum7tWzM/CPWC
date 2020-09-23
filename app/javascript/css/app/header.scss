@@ -15,9 +15,14 @@
   grid-template-rows: 1fr 1fr;
   justify-content: center;
 
-  h1 {
+  h1 a {
     align-self: center;
     margin: 0;
+    color: #fff;
+
+    &:hover {
+      color: #d4e6b5ff;
+    }
   }
 
   .logo-image{

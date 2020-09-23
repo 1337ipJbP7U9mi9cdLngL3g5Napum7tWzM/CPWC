@@ -68,17 +68,6 @@ $light-grey: #2d2d2d;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   justify-items: center;
   padding: 0 2em;
-}
-
-#addresses {
-  justify-content: center;
-}
-
-.address {
-  display: grid;
-  grid-template-areas: "address crypto fiat remove";
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  padding: 0 2em;
 
   hr {
     grid-column: 1/5;
@@ -86,6 +75,42 @@ $light-grey: #2d2d2d;
   }
 }
 
+#addresses {
+  justify-content: center;
+}
+
 #input-address {
   margin: 0 0.2em;
+}
+
+.address-totals__center {
+  display: grid;
+  justify-items: center;
+}
+
+.address {
+  display: grid;
+  grid-template-areas: "address crypto fiat remove";
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 0 2em;
+  justify-items: center;
+
+  hr {
+    grid-column: 1/5;
+    width: 100%;
+  }
+}
+
+
+.tea_color {
+  color: #d4e6b5ff;
+}
+
+.remove {
+  color: #d4e6b5ff;
+
+  &:hover {
+    color: #f29595;
+    cursor: pointer;
+  }
 }

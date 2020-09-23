@@ -21,19 +21,33 @@ class CpwcAddresses extends LitElement {
     this.checkedBalanceState === "true" ?
       totalTemplate = html `
         <div class="address-totals">
-          <span>Addresses:<br>${this.totalAddresses()}</span>
-          <span>Crypto Amount:<br>${this.totalCryptoAmount()}</span>
-          <span>Fiat Amount:<br>${this.totalFiatAmount()}</span>
-          <span>Remove</span>
+          <div class="address-totals__center">
+            <span class="tea_color">Addresses:</span>
+            <span>${this.totalAddresses()}</span>
+          </div>
+          <div class="address-totals__center">
+            <span class="tea_color">Crypto Amount:</span>
+            <span>${this.totalCryptoAmount()}</span>
+          </div>
+          <div class="address-totals__center">
+            <span class="tea_color">Fiat Amount:</span>
+            <span>${this.totalFiatAmount()}</span>
+          </div>
+          <span class="remove">Remove All</span>
+          <hr>
         </div>
       `
       :
       totalTemplate = html `
         <div class="address-totals">
-          <span>Addresses:<br>${this.totalAddresses()}</span>
-          <span>Crypto Amount: </span>
-          <span>Fiat Amount: </span>
-          <span>Remove</span>
+          <div class="address-totals__center">
+            <span class="tea_color">Addresses:</span>
+            <span>${this.totalAddresses()}</span>
+          </div>
+          <span class="tea_color">Crypto Amount: </span>
+          <span class="tea_color">Fiat Amount: </span>
+          <span class="remove">Remove All</span>
+          <hr>
         </div>
       `
     return totalTemplate
