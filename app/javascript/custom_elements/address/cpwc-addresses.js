@@ -60,7 +60,7 @@ class CpwcAddresses extends LitElement {
     return html`
       <div @keyup=${this.onEnter} data-controller="api" class="input-addresses">
         <span class="check-address">
-          <button type="button" name="check" data-action="click->api#submitAddress"
+          <button class="btns" type="button" name="check" data-action="click->api#submitAddress"
             class="check-address">
             Check Address
           </button>
@@ -70,7 +70,7 @@ class CpwcAddresses extends LitElement {
           id="input-address"
           plaveholder="Please input Public Address"></input>
         <span class="enter-address">
-          <button @click=${this.submitAddress} type="button" name="enter">Enter Address</button>
+          <button class="btns" @click=${this.submitAddress} type="button" name="enter">Enter Address</button>
         </span>
       </div>
       <div id="addresses">

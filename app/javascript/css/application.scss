@@ -22,3 +22,17 @@ html, body {
 a {
   text-decoration: none;
 }
+
+.btns {
+	background-color: #141a1eff;
+	border: 1px solid #d4e6b5ff;
+	color: #fff;
+	padding: 0.35em 1em;
+  border-radius: 0.25em;
+
+  &:hover {
+    color: #d4e6b5ff;
+    border-color: #fff;
+    cursor: pointer;
+  }
+}

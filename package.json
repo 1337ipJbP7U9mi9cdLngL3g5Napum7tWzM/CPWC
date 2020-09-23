@@ -2,7 +2,7 @@
   "name": "CPWC",
   "private": true,
   "dependencies": {
-    "@material/mwc-button": "^0.17.2",
+    "@material/mwc-button": "^0.18.0",
     "@material/mwc-list": "^0.17.2",
     "@material/mwc-select": "^0.17.2",
     "@rails/actioncable": "^6.0.0-alpha",

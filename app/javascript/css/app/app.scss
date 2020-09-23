@@ -45,8 +45,11 @@ $light-grey: #2d2d2d;
 
 .input-addresses {
   display: grid;
+  grid-template-columns: auto 1fr auto;
   grid-template-areas:
   "check input enter";
+  padding: 0 1em;
+  margin-bottom: 1.5em;
 
   .check-address {
     grid-area: check;
@@ -59,16 +62,30 @@ $light-grey: #2d2d2d;
 }
 
 .address-totals {
+  display: grid;
   justify-self: center;
+  margin-bottom: 1.5em;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  padding: 0 2em;
 }
 
 #addresses {
-  display: grid;
   justify-content: center;
 }
 
 .address {
   display: grid;
   grid-template-areas: "address crypto fiat remove";
-  grid-template-columns: auto 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 0 2em;
+
+  hr {
+    grid-column: 1/5;
+    width: 100%;
+  }
+}
+
+#input-address {
+  margin: 0 0.2em;
 }
