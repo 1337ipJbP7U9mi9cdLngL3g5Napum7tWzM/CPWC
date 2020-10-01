@@ -14,13 +14,22 @@ class CpwcAddress extends LitElement {
   render() {
     return html`
       <div class="address">
-        <span class="address__address">${this.address}</span>
+        <span class="address__address" @click=${this.openModal}>${this.address}</span>
         <span class="address__crypto">${this.crypto_amount}</span>
         <span class="address__crypto">${this.fiat_amount}</span>
         <span class="remove">Remove Me</span>
         <hr>
       </div>
     `;
+  }
+
+  openModal() {
+    // modal open
+    document.getElementsByClassName("modal")[0].style.display = "block";
+    // qrcode info
+    document.getElementsByTagName('qr-code')[0].setAttribute('data', this.address)
+    // h5 holding the address
+    document.querySelector('.modal-content h5').innerText = this.address
   }
 
   createRenderRoot() {
