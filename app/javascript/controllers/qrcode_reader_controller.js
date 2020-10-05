@@ -16,7 +16,7 @@ export default class extends Controller {
   startQrCode() {
     // console.log('try to start qrcode')
     let html5QrcodeScanner = new Html5QrcodeScanner(
-      "reader", { fps: 10, qrbox: 250 }, /* verbose= */ true);
+      "reader", { fps: 10, qrbox: 100 }, /* verbose= */ true);
     html5QrcodeScanner.render(this.onScanSuccess, this.onScanFailure);
   }
 

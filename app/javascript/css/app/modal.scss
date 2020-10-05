@@ -28,3 +28,37 @@
     }
   }
 }
+
+
+// Camera Modal
+
+.camera-modal {
+  display: none;
+	position: fixed;
+	background-color: #141a1eb8;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  z-index: 100;
+
+  #reader {
+    display: grid;
+    background-color: #141a1eff;
+    margin: 5% auto;
+    width: 80%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    border-radius: 1em;
+    border: 2px solid #d4e6b5ff;
+
+    // qr-code {
+    //   grid-column: 2/4;
+    //   margin-top: 1em;
+    // }
+    //
+    // h5 {
+    //   grid-column: 2/4;
+    // }
+  }
+}

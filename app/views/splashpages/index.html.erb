@@ -1,5 +1,6 @@
 <%= javascript_pack_tag 'app' %>
 <%= stylesheet_pack_tag 'app' %>
+<script src="./html5-qrcode.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Material+Icons&display=block" rel="stylesheet">
 
@@ -32,13 +33,6 @@
 </header>
 
 <main class="main">
-  <!-- <script src="./html5-qrcode.min.js"></script>
-  <div id="reader" width="600px" data-controller="qrcode-reader">
-    <button type="button" name="button" data-action="click->qrcode-reader#startQrCode">
-      Boobs
-    </button>
-  </div> -->
-
   <section class="dropdowns">
     <cpwc-crypto-dropdowns>
     </cpwc-crypto-dropdowns>
@@ -53,6 +47,14 @@
   <div class="modal-content">
     <qr-code format="svg"></qr-code>
     <h5></h5>
+  </div>
+</div>
+
+<div class="camera-modal">
+  <div id="reader" data-controller="qrcode-reader">
+    <!-- <button type="button" name="button" data-action="click->qrcode-reader#startQrCode">
+      Boobs
+    </button> -->
   </div>
 </div>
 

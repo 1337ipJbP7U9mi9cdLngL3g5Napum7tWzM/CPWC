@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   root 'splashpages#index'
 
   resources :contacts,  only: [:index, :new, :create, :destroy]
-  resources :posts
+  # why does this mess things up
+  resources :posts, only: [:index]
   resources :sessions, only: [:new, :create]
 
   get 'contacts/destroy_all', to: 'contacts#destroy_all'

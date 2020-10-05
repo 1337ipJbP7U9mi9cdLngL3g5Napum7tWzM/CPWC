@@ -1,6 +1,7 @@
 @import 'dropdowns.scss';
 @import 'header.scss';
 @import 'modal.scss';
+@import 'camera.scss';
 
 $rich-black-fogra-29: #141a1eff;
 $pakistan-green: #2a7221ff;
@@ -46,15 +47,20 @@ $light-grey: #2d2d2d;
 
 .input-addresses {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr auto auto;
   grid-template-areas:
-  "check input enter";
+  "check input camera enter";
   padding: 0 1em;
   margin-bottom: 1.5em;
 
   .check-address {
     grid-area: check;
     justify-self: right;
+  }
+
+  .camera {
+    grid-area: camera;
+    margin-right: 0.2em;
   }
 
   .enter-address {

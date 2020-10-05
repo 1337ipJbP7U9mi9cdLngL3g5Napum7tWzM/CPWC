@@ -2,6 +2,7 @@
   "name": "CPWC",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.0",
     "@material/mwc-button": "^0.18.0",
     "@material/mwc-list": "^0.17.2",
     "@material/mwc-select": "^0.17.2",

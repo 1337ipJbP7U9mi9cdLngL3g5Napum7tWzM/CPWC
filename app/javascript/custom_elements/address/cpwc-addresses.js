@@ -83,6 +83,7 @@ class CpwcAddresses extends LitElement {
           type="text"
           id="input-address"
           plaveholder="Please input Public Address"></input>
+        <span class="camera" data-controller="cameramodal"><button class="btns" data-action="click->cameramodal#openModal"><i class="fas fa-qrcode"></i></button></span>
         <span class="enter-address">
           <button class="btns" @click=${this.submitAddress} type="button" name="enter">Enter Address</button>
         </span>
