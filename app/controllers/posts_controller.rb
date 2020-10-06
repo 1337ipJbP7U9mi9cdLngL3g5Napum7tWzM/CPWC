@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     @post = Post.friendly.find(params[:id])
     @title = @post.title
     @image = @post.image
-    @url = "https://www.cryptopaperwalletschecker.com/posts/#{@post.slug}"
+    @url = "https://www.cryptocurrencieschecker.com/posts/#{@post.slug}"
     @shortDescription = @post.short_description
   end
 
