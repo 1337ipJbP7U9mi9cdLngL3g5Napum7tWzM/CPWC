@@ -1,11 +1,3 @@
-<%= javascript_pack_tag 'app' %>
-<%= stylesheet_pack_tag 'app' %>
-<script src="./html5-qrcode.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Material+Icons&display=block" rel="stylesheet">
-
-<div class="app">
-
 <header class="header">
   <div class="logo">
       <div class="logo-image"><a href="/"></a></div>
@@ -31,28 +23,3 @@
   </div>
   <hr>
 </header>
-
-<main class="main">
-  <section class="dropdowns">
-    <cpwc-crypto-dropdowns>
-    </cpwc-crypto-dropdowns>
-  </section>
-  <section class="inputs">
-    <cpwc-addresses>
-    </cpwc-addresses>
-  </section>
-</main>
-
-<div class="modal" data-controller="qrmodal" data-action="click->qrmodal#closeModal">
-  <div class="modal-content">
-    <qr-code format="svg"></qr-code>
-    <h5></h5>
-  </div>
-</div>
-
-<div class="camera-modal">
-  <div id="reader" data-controller="qrcode-reader">
-  </div>
-</div>
-
-</div>

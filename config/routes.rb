@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :contacts,  only: [:index, :new, :create, :destroy]
   # why does this mess things up
-  resources :posts, only: [:index]
+  resources :posts
   resources :sessions, only: [:new, :create]
 
   get 'contacts/destroy_all', to: 'contacts#destroy_all'
