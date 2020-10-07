@@ -70,11 +70,12 @@ export default class extends Controller {
 
   addAddress(address) {
     const cpwc_addresses = document.getElementsByTagName('cpwc-addresses')[0]
-    let addresses = cpwc_addresses.addresses
-
-    addresses.push({address: address})
-    cpwc_addresses.addresses = addresses
-    cpwc_addresses.update()
+    // let addresses = cpwc_addresses.addresses
+    //
+    // addresses.push({address: address})
+    // cpwc_addresses.addresses = addresses
+    // cpwc_addresses.update()
+    cpwc_addresses.addAddress(address)
   }
 
 }

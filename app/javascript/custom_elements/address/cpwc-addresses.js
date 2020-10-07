@@ -145,6 +145,7 @@ class CpwcAddresses extends LitElement {
   }
 
   addAddress(address) {
+    address = address.trim()
     const valid = this.checkValidAddress(address)
     if(valid) {
       this.addresses = [... this.addresses, {address: address}];

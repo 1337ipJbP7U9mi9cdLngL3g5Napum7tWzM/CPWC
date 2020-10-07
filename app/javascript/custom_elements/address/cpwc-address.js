@@ -17,7 +17,7 @@ class CpwcAddress extends LitElement {
         <span class="address__address" @click=${this.openModal}>${this.address}</span>
         <span class="address__crypto">${this.crypto_amount}</span>
         <span class="address__crypto">${this.fiat_amount}</span>
-        <span class="remove">Remove Me</span>
+        <span class="remove" @click=${this.removeAddress}>Remove Me</span>
         <hr>
       </div>
     `;
@@ -30,6 +30,21 @@ class CpwcAddress extends LitElement {
     document.getElementsByTagName('qr-code')[0].setAttribute('data', this.address)
     // h5 holding the address
     document.querySelector('.modal-content h5').innerText = this.address
+  }
+
+  removeAddress() {
+    let addresses = document.getElementsByTagName('cpwc-addresses')[0]
+    for(let i = 0; i < addresses.addresses.length; i++) {
+      if(this.address === addresses.addresses[i].address) {
+        addresses.addresses = this.remove(addresses.addresses, i)
+        break
+      }
+    }
+  }
+
+  remove(items, index) {
+    return [...items.slice(0,index),
+        ...items.slice(index+1,items.length)];
   }
 
   createRenderRoot() {
