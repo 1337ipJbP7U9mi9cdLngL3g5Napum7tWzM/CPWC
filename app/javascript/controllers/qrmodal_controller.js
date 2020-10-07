@@ -6,7 +6,7 @@ export default class extends Controller {
   }
 
   closeModal(e) {
-    if(e.target.classList[0] !== "modal-content") {
+    if(e.target.classList[0] === "modal") {
       this.element.style.display = "none"
     }
   }

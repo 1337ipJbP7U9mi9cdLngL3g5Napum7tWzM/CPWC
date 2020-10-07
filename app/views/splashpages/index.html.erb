@@ -50,8 +50,11 @@
   </div>
 </div>
 
-<div class="camera-modal">
-  <div id="reader" data-controller="qrcode-reader">
+<div class="camera-modal" data-controller="cameramodal" data-action="click->cameramodal#closeModal">
+  <div class="camera-modal-content">
+    <div id="reader" data-controller="qrcode-reader">
+
+    </div>
   </div>
 </div>
 

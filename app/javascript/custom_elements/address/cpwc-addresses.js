@@ -33,7 +33,7 @@ class CpwcAddresses extends LitElement {
             <span class="tea_color">Fiat Amount:</span>
             <span>${this.totalFiatAmount()}</span>
           </div>
-          <span class="remove">Remove All</span>
+          <span class="remove" @click=${this.removeAllAddresses}>Remove All</span>
           <hr>
         </div>
       `
@@ -46,7 +46,7 @@ class CpwcAddresses extends LitElement {
           </div>
           <span class="tea_color">Crypto Amount: </span>
           <span class="tea_color">Fiat Amount: </span>
-          <span class="remove">Remove All</span>
+          <span class="remove" @click=${this.removeAllAddresses}>Remove All</span>
           <hr>
         </div>
       `
@@ -124,6 +124,10 @@ class CpwcAddresses extends LitElement {
     })
 
     return fiatAmount.toFixed(2)
+  }
+
+  removeAllAddresses() {
+    this.addresses = []
   }
 
   // Button click to add Address

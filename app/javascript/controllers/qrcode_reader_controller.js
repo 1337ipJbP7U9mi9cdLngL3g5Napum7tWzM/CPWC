@@ -11,23 +11,37 @@ export default class extends Controller {
     // console.log('im in qrreader')
     // console.log(Html5QrcodeScanner)
     // console.log(QrScannerLib.WORKER_PATH = QrScannerWorkerPath);
+    this.html5QrcodeScanner = ''
   }
 
   startQrCode() {
     // console.log('try to start qrcode')
-    let html5QrcodeScanner = new Html5QrcodeScanner(
-      "reader", { fps: 10, qrbox: 100 }, /* verbose= */ true);
-    html5QrcodeScanner.render(this.onScanSuccess, this.onScanFailure);
+    this.html5QrcodeScanner = new Html5QrcodeScanner(
+      "reader", { fps: 10, qrbox: 300 }, /* verbose= */ true);
+    this.html5QrcodeScanner.render(this.onScanSuccess, this.onScanFailure);
   }
 
   onScanSuccess(qrMessage) {
   	// handle the scanned code as you like
   	console.log(`QR matched = ${qrMessage}`);
+    const cpwc_addresses = document.getElementsByTagName('cpwc-addresses')[0]
+    cpwc_addresses.addAddress(qrMessage)
+    document.getElementById('reader').innerHtml = ""
   }
 
   onScanFailure(error) {
   	// handle scan failure, usually better to ignore and keep scanning
   	// console.warn(`QR error = ${error}`);
+  }
+
+  stopQrCode() {
+    console.log('in stop camera', Html5QrcodeScanner)
+    console.log(this.html5QrcodeScanner)
+    this.html5QrcodeScanner.stop().then(ignore => {
+      console.log('stop?')
+    }).catch(err => {
+      console.log(err)
+    })
   }
 
 }
