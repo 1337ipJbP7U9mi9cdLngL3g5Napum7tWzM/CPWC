@@ -23,10 +23,11 @@ export default class extends Controller {
 
   onScanSuccess(qrMessage) {
   	// handle the scanned code as you like
-  	console.log(`QR matched = ${qrMessage}`);
+    const stop = document.getElementById('reader__dashboard_section_csr').lastChild.lastChild
+    stop.click()
+    console.log(`QR matched = ${qrMessage}`);
     const cpwc_addresses = document.getElementsByTagName('cpwc-addresses')[0]
     cpwc_addresses.addAddress(qrMessage)
-    document.getElementById('reader').innerHtml = ""
   }
 
   onScanFailure(error) {

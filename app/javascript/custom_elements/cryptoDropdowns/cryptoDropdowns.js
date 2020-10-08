@@ -79,6 +79,20 @@ class CpwcCryptoDropdowns extends LitElement {
     return dropdownItems
   }
 
+  currentRate() {
+    if(this.currentCurrenciesPrice["usd"]) {
+      return html`
+        <div class="current_rate">
+          <span>1</span>
+          <span>=</span>
+          <span>${this.currentCurrenciesPrice[this.currentCurrency]}</span>
+        </div>
+      `
+    } else {
+      return null
+    }
+  }
+
   render() {
     return html`
       <div class="crypto-dropdowns">
@@ -90,6 +104,7 @@ class CpwcCryptoDropdowns extends LitElement {
           ${this.currencyDropdown()}
         </mwc-select>
       <!-- <div>Value: <span id="preselectedValue"></span></div> -->
+        ${this.currentRate()}
       </div>
     `
   }

@@ -50,3 +50,10 @@ $light-grey: #2d2d2d;
   --mdc-list-vertical-padding: 0px;
   --mdc-list-side-padding: 30px;
 }
+
+.current_rate {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	justify-items: center;
+	margin-top: 10px;
+}

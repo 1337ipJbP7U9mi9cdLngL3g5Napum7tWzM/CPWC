@@ -13,10 +13,12 @@
     background-color: #141a1eff;
     margin: 5% auto;
     width: 80%;
+    max-height: 80%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
     border-radius: 1em;
     border: 2px solid #d4e6b5ff;
+    overflow-y: auto;
 
     qr-code {
       grid-column: 2/4;

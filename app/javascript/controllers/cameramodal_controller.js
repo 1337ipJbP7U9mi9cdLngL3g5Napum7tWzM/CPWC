@@ -15,9 +15,8 @@ export default class extends Controller {
   closeModal(e) {
     if(e.target.classList[0] === "camera-modal") {
       this.element.style.display = "none"
-      // const el = document.getElementById('reader')
-      // const qrReader = this.application.getControllerForElementAndIdentifier(el, 'qrcode-reader')
-      // qrReader.stopQrCode()
+      const stop = document.getElementById('reader__dashboard_section_csr').lastChild.lastChild
+      stop.click()
     }
   }
 
