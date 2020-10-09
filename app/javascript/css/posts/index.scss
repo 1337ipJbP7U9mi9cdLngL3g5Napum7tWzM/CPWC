@@ -23,7 +23,7 @@
   margin-bottom: 1em;
   cursor: pointer;
   max-width: 36em;
-  font-size: 1.3em;
+  font-size: 1.2em;
   line-height: 1.5em;
 
   &:hover {
@@ -53,6 +53,9 @@
 
 .post_title {
   text-align: center;
+  font-size: 2em;
+  line-height: 1.01em;
+  margin-top: 0;
 }
 
 .post_time_index {
@@ -64,7 +67,7 @@
 
 .post_time_updated_index {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   justify-items: center;
   width: 100%;
   // margin-bottom: 3em;

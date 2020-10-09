@@ -10,12 +10,12 @@
           <h2 class="post_title title_font"><%= post.title %></h2>
           <% unless post.created_at.to_i == post.updated_at.to_i %>
             <div class="post_time_updated_index">
-              <span class="created_at">Created: <%= post.created_at.localtime.strftime('%B %-d, %Y %l:%M%P') %></span>
-              <span class="updated_at">Edited: <%= post.updated_at.localtime.strftime('%B %-d, %Y %l:%M%P') %></span>
+              <span class="created_at">Created:  <%= post.created_at.localtime.strftime('%B %-d, %Y') %></span>
+              <span class="updated_at">Updated:  <%= post.updated_at.localtime.strftime('%B %-d, %Y') %></span>
             </div>
           <% else %>
             <div class="post_time_index">
-              <span class="created_at">Created: <%= post.created_at.localtime.strftime('%B %-d, %Y %l:%M%P') %></span>
+              <span class="created_at">Created: <%= post.created_at.localtime.strftime('%B %-d, %Y') %></span>
             </div>
           <% end %>
           <hr>
