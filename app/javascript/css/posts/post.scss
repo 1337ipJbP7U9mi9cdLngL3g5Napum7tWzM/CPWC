@@ -22,7 +22,7 @@
 
 .post__title {
   font-size: 2em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   margin-top: 2em;
   max-width: 80%;
   text-align: center;
@@ -38,4 +38,19 @@
   margin-bottom: 4em;
   line-height: 1.5em;
   font-size: 1.3em;
+}
+
+.post_time {
+  display: grid;
+  justify-items: center;
+  width: 100%;
+  margin-bottom: 3em;
+}
+
+.post_time_updated {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  width: 100%;
+  margin-bottom: 3em;
 }

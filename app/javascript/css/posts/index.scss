@@ -23,6 +23,8 @@
   margin-bottom: 1em;
   cursor: pointer;
   max-width: 36em;
+  font-size: 1.3em;
+  line-height: 1.5em;
 
   &:hover {
     box-shadow: 0 2px 10px rgba(0, 255, 40, 0.85);
@@ -51,4 +53,19 @@
 
 .post_title {
   text-align: center;
+}
+
+.post_time_index {
+  display: grid;
+  justify-items: center;
+  width: 100%;
+  // margin-bottom: 3em;
+}
+
+.post_time_updated_index {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  width: 100%;
+  // margin-bottom: 3em;
 }

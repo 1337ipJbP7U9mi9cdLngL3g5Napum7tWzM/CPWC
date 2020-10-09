@@ -6,6 +6,16 @@
 <main class="post_main">
   <div class="post_individual post_font">
     <h2 class="post__title title_font"><%= @title %></h2>
+    <% unless @post.created_at.to_i == @post.updated_at.to_i %>
+      <div class="post_time_updated">
+        <span class="created_at">Created: <%= @post.created_at.localtime.strftime('%B %-d, %Y %l:%M%P') %></span>
+        <span class="updated_at">Edited: <%= @post.updated_at.localtime.strftime('%B %-d, %Y %l:%M%P') %></span>
+      </div>
+    <% else %>
+      <div class="post_time">
+        <span class="created_at">Created: <%= @post.created_at.localtime.strftime('%B %-d, %Y %l:%M%P') %></span>
+      </div>
+    <% end %>
     <% unless @image.nil? || @image == '' %>
       <span class="post-image"><%= image_pack_tag @image %></span>
     <% end %>
