@@ -114,6 +114,8 @@ class CpwcCryptoDropdowns extends LitElement {
     const selectedText = evt.target.selectedText.toLowerCase()
     this.currentCurrency = selectedText
     cpwc_addresses.changeAddressesCurrencyAmount(this.currentCurrenciesPrice[selectedText])
+    cpwc_addresses.fiat = selectedText.toUpperCase();
+    cpwc_addresses.update();
   }
 
   returnCryptoObject() {

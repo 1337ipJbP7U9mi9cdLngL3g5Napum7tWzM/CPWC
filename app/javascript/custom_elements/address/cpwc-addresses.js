@@ -14,6 +14,7 @@ class CpwcAddresses extends LitElement {
     super();
     this.addresses = [];
     this.checkedBalanceState = "false";
+    this.fiat = 'USD';
   }
 
   totalsOnChecked() {
@@ -30,7 +31,7 @@ class CpwcAddresses extends LitElement {
             <span>${this.totalCryptoAmount()}</span>
           </div>
           <div class="address-totals__center">
-            <span class="tea_color">Fiat Amount:</span>
+            <span class="tea_color">${this.fiat} Amount:</span>
             <span>${this.totalFiatAmount()}</span>
           </div>
           <span class="remove" @click=${this.removeAllAddresses}>Remove All</span>
@@ -45,7 +46,7 @@ class CpwcAddresses extends LitElement {
             <span>${this.totalAddresses()}</span>
           </div>
           <span class="tea_color">Crypto Amount: </span>
-          <span class="tea_color">Fiat Amount: </span>
+          <span class="tea_color">${this.fiat} Amount: </span>
           <span class="remove" @click=${this.removeAllAddresses}>Remove All</span>
           <hr>
         </div>
