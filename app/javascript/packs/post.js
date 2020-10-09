@@ -1,7 +1,7 @@
 // import 'css/post_index';
 // import 'css/post_show';
-import 'css/post';
-import 'css/index';
+import 'css/posts/post';
+import 'css/posts/index';
 
 
 // const importAll = (r) => r.keys().map(r)

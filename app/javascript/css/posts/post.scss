@@ -1,0 +1,26 @@
+.post_main {
+  display: grid;
+  justify-items: center;
+}
+
+.post_individual {
+  display: grid;
+  justify-items: center;
+}
+
+.post__title {
+  font-size: 2em;
+  margin-bottom: 2em;
+  max-width: 80%;
+  text-align: center;
+}
+
+// .post-content {
+//   max-width: 36em;
+//   margin-bottom: 4em;
+// }
+
+.trix-content {
+  max-width: 36em;
+  margin-bottom: 4em;
+}

@@ -1,5 +1,16 @@
-Post Show
+<%= stylesheet_pack_tag 'post', 'nonapp_header' %>
+<%= javascript_pack_tag 'post', 'nonapp_header' %>
 
-<%= @title %>
-<%= @image %>
-<%= @post.body %>
+<%= render 'layouts/header' %>
+
+<main class="post_main">
+  <div class="post_individual post_font">
+    <h2 class="post__title title_font"><%= @title %></h2>
+    <% unless @image.nil? || @image == '' %>
+      <span class="post-image"><%= image_pack_tag @image %></span>
+    <% end %>
+    <div class="trix-content post-content">
+      <%= @post.body %>
+    </div>
+  </div>
+</main>

@@ -15,7 +15,7 @@
         "@type": "Article",
         "headline": "<%= @title %>",
         "author": "The Crypto Enthusiast",
-        <% if @image %>
+        <% unless @image.nil? || @image == '' %>
         "image": "https://www.cryptopaperwalletschecker.com<%= asset_pack_path 'media/images/' + @image %>",
         <% end %>
         "genre": "digital business",
