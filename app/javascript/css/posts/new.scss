@@ -16,6 +16,8 @@ trix-toolbar .trix-button {
 
 trix-editor {
   width: 36em;
+  max-height: 85vh;
+  overflow-y: auto;
 }
 
 .trix_field {
