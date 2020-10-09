@@ -1,3 +1,15 @@
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Montserrat Alternates', sans-serif;
+
+
+.title_font {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.post_font {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .post_main {
   display: grid;
   justify-items: center;
@@ -11,6 +23,7 @@
 .post__title {
   font-size: 2em;
   margin-bottom: 2em;
+  margin-top: 2em;
   max-width: 80%;
   text-align: center;
 }
@@ -23,4 +36,6 @@
 .trix-content {
   max-width: 36em;
   margin-bottom: 4em;
+  line-height: 1.5em;
+  font-size: 1.3em;
 }

@@ -1,3 +1,15 @@
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Montserrat Alternates', sans-serif;
+
+
+.title_font {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.post_font {
+  font-family: 'Montserrat', sans-serif;
+}
+
 trix-toolbar .trix-button {
   background: #fff !important;
 }
@@ -14,4 +26,6 @@ trix-editor {
 .trix-content {
   max-width: 36em;
   margin-bottom: 4em;
+  line-height: 1.5em;
+  font-size: 1.3em;
 }
