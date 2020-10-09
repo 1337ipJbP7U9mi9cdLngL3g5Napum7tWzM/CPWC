@@ -39,13 +39,14 @@
 .spreadsheet {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   align-items: center;
   justify-items: center;
 
   h4 {
     grid-column: 1/3;
     grid-row: 1/2;
+    margin: 0 0;
   }
 
   .csv__reader {
@@ -60,6 +61,12 @@
   .csv__generator {
     grid-column: 2/3;
     grid-row: 2/3;
+  }
+
+  #csv_generator_input {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    width: 80%;
   }
 }
 
