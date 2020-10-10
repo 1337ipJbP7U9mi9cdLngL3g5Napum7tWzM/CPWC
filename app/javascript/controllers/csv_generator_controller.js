@@ -25,14 +25,10 @@ export default class extends Controller {
 
     let csvName = ''
     if(csvNameInput.value !== '') {
-      console.log('hi 1')
       csvName = csvNameInput.value + '.csv'
     } else {
-      console.log('hi 2')
       csvName = 'CryptocurrenciesChecker.csv'
     }
-
-    console.log(csvName)
 
     csv = `Addresses: ${totalAddresses}, ${cryptoName}: ${totalCrypto},${fiatName}: ${totalFiat}`
 

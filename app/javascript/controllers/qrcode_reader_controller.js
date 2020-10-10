@@ -1,16 +1,9 @@
 import { Controller } from "stimulus"
-// import { Html5QrcodeScanner, Html5Qrcode } from '../3rdparty/html5_qrcode.js';
-// import QrScanner from 'qr-scanner';
-// import QrScannerWorkerPath from '!!file-loader!../../../node_modules/qr-scanner/qr-scanner-worker.min.js';
-
 
 export default class extends Controller {
   // static targets = [ "output" ]
 
   connect() {
-    // console.log('im in qrreader')
-    // console.log(Html5QrcodeScanner)
-    // console.log(QrScannerLib.WORKER_PATH = QrScannerWorkerPath);
     this.html5QrcodeScanner = ''
   }
 
@@ -23,8 +16,9 @@ export default class extends Controller {
 
   onScanSuccess(qrMessage) {
   	// handle the scanned code as you like
-    const stop = document.getElementById('reader__dashboard_section_csr').lastChild.lastChild
-    stop.click()
+    // const stop = document.getElementById('reader__dashboard_section_csr').lastChild.lastChild
+    // stop.click()
+    this.html5QrcodeScanner.clear();
     console.log(`QR matched = ${qrMessage}`);
     const cpwc_addresses = document.getElementsByTagName('cpwc-addresses')[0]
     cpwc_addresses.addAddress(qrMessage)
