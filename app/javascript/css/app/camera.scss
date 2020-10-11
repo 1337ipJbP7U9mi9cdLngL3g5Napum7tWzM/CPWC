@@ -3,3 +3,24 @@
 //   grid-template-columns: 1fr;
 //   justify-items: center;
 // }
+
+#reader__dashboard_section_swaplink {
+  text-decoration: none !important;
+  color: #fff;
+
+  &:hover {
+    color: #d4e6b5ff;
+  }
+}
+
+#reader__dashboard_section_csr {
+  width: 18em !important;
+}
+
+#reader__filescan_input {
+  width: 16em !important;
+}
+
+#reader__dashboard_section_fsr {
+  margin-right: 20px;
+}
