@@ -1,5 +1,6 @@
 @import 'dropdowns.scss';
 @import 'header.scss';
+@import 'footer.scss';
 @import 'modal.scss';
 @import 'camera.scss';
 
@@ -17,7 +18,8 @@ $light-grey: #2d2d2d;
   display: grid;
   grid-template-areas:
     "header header header"
-    "main   main   main";
+    "main   main   main"
+    "footer footer footer";
   grid-template-rows: auto 1fr;
 }
 
@@ -31,6 +33,10 @@ $light-grey: #2d2d2d;
   grid-template-areas:
   ". dropdowns ."
   "inputs inputs inputs";
+}
+
+.app_footer {
+  grid-area: footer;
 }
 
 .dropdowns {

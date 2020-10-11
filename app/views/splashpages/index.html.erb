@@ -6,57 +6,68 @@
 
 <div class="app">
 
-<header class="header">
-  <div class="logo">
-      <div class="logo-image"><a href="/"></a></div>
-      <h1><a href="/">CryptocurrenciesChecker</a></h1>
-  </div>
-  <div class="nav">
-    <div class="spreadsheet">
-      <h4>Speadsheet</h4>
-      <div class="csv__reader" data-controller="csv-reader">
-        <button class="btns" data-action="click->csv-reader#inputCsv">Load</button>
-        <input class="hidden" type="file" id="csvFileInput"
-          data-target="csv-reader.input"
-          data-action="change->csv-reader#handleFiles" accept=".csv">
+  <header class="header">
+    <div class="logo">
+        <div class="logo-image"><a href="/"></a></div>
+        <h1><a href="/">CryptocurrenciesChecker</a></h1>
+    </div>
+    <div class="nav">
+      <div class="spreadsheet">
+        <h4>Speadsheet</h4>
+        <div class="csv__reader" data-controller="csv-reader">
+          <button class="btns" data-action="click->csv-reader#inputCsv">Load</button>
+          <input class="hidden" type="file" id="csvFileInput"
+            data-target="csv-reader.input"
+            data-action="change->csv-reader#handleFiles" accept=".csv">
+        </div>
+        <div class="csv__generator" data-controller="csv-generator">
+          <a href="#" class="export" data-action="click->csv-generator#createCsv">
+            <button class="btns">Export</button></a>
+        </div>
+        <input id="csv_generator_input" type="text" value="" placeholder="Spreadsheet Name">
       </div>
-      <div class="csv__generator" data-controller="csv-generator">
-        <a href="#" class="export" data-action="click->csv-generator#createCsv">
-          <button class="btns">Export</button></a>
+      <div class="blog">
+        <a href="/posts">Blog</a>
       </div>
-      <input id="csv_generator_input" type="text" value="" placeholder="Spreadsheet Name">
     </div>
-    <div class="blog">
-      <a href="/posts">Blog</a>
-    </div>
-  </div>
-  <hr>
-</header>
+    <hr>
+  </header>
 
-<main class="main">
-  <section class="dropdowns">
-    <cpwc-crypto-dropdowns>
-    </cpwc-crypto-dropdowns>
-  </section>
-  <section class="inputs">
-    <cpwc-addresses>
-    </cpwc-addresses>
-  </section>
-</main>
+  <main class="main">
+    <section class="dropdowns">
+      <cpwc-crypto-dropdowns>
+      </cpwc-crypto-dropdowns>
+    </section>
+    <section class="inputs">
+      <cpwc-addresses>
+      </cpwc-addresses>
+    </section>
+  </main>
 
-<div class="modal" data-controller="qrmodal" data-action="click->qrmodal#closeModal">
-  <div class="modal-content">
-    <qr-code format="svg"></qr-code>
-    <h5></h5>
-  </div>
-</div>
-
-<div class="camera-modal" data-controller="cameramodal" data-action="click->cameramodal#closeModal">
-  <div class="camera-modal-content">
-    <div id="reader" data-controller="qrcode-reader">
-
+  <div class="modal" data-controller="qrmodal" data-action="click->qrmodal#closeModal">
+    <div class="modal-content">
+      <qr-code format="svg"></qr-code>
+      <h5></h5>
     </div>
   </div>
-</div>
+
+  <div class="camera-modal" data-controller="cameramodal" data-action="click->cameramodal#closeModal">
+    <div class="camera-modal-content">
+      <div id="reader" data-controller="qrcode-reader">
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="app__footer">
+    <hr>
+    <div class="app__contact">
+      <a href="contacts/new" class="btns">Contact</a>
+    </div>
+    <div id="app__donation">
+      <span>Donations Appreciated!</span>
+      <span class="app__donation">1337ipJbP7U9mi9cdLngL3g5Napum7tWzM</span>
+    </div>
+  </footer>
 
 </div>
