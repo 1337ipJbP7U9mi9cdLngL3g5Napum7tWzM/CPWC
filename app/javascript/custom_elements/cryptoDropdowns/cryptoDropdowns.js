@@ -9,7 +9,8 @@ class CpwcCryptoDropdowns extends LitElement {
       cryptoIds: {type: Array},
       currentCurrenciesPrice: {type: Object},
       currentCurrency: {type: String},
-      currenciesArray: {type: Array}
+      currenciesArray: {type: Array},
+      donationAddresses: {type: Object}
     }
   }
 
@@ -50,6 +51,29 @@ class CpwcCryptoDropdowns extends LitElement {
       "sar", "sek", "sgd", "thb", "try", "twd", "uah", "usd", "vef", "vnd",
       "xag", "xau", "xdr", "xlm", "xrp", "zar"
     ];
+    this.donationAddresses = {
+      btc: "1337ipJbP7U9mi9cdLngL3g5Napum7tWzM",
+      eth: "0x94483b123b422d2Ab61fC459118667513956144E",
+      bch: "1GDLQvcZY8TS56gf6X8Hm94B8wRkbtV438",
+      ltc: "LWcXUB6ny88tK49TK1V6KprE5oDcJ1zJhx",
+      ppc: "PMWKyz4Sr8nKZnjABsWKnxJHCnjKo4garm",
+      doge: "DND5TbT834xsjBre1c6pREJYWMDWKAL1rc",
+      nmc: "NKX2XRAnucmc8RBTV9oZo8kgx7NP6K52JV",
+      etc: "Ethereum Classic Paper Wallet Checker!",
+      vtc: "VhuhgKpVwgqyuNCsJpEjcWxxKyP9rm9Aod",
+      dash: "XckPoTubxQ8PbY9VAYCnSZarpsq6BFNUHA",
+      btg: "GMbBJi6x6osdKnCnQUZqUWgD3fGztzik1h",
+      neo: "Neo Cryptocurrency Checker!",
+      gas: "Neo Gas Cryptocurrency Checker!",
+      qtum: "Qtum Cryptocurrency Checker!",
+      kmd: "Komodo Cryptocurrency Checker!",
+      btcz: "Bitcoinz Cryptocurrency Checker!",
+      zen: "Zen Cryptocurrency Checker!",
+      zec: "t1d29PNHtTJHHE4jMeLJFrmRcHJNhyYxZZC",
+      zcl: "ZClassic Cryptocurrency Checker!",
+      dcr: "Decred Cryptocurrency Checker!",
+      dgb: "DKkftwDYUQpMZCcDmcgtbLnCk5sf1qV9Hi"
+    }
   }
 
   cryptoDropdown() {
@@ -96,7 +120,8 @@ class CpwcCryptoDropdowns extends LitElement {
   render() {
     return html`
       <div class="crypto-dropdowns">
-        <mwc-select outlined label="Crypto" id="crypto">
+        <mwc-select outlined label="Crypto" id="crypto"
+          @action=${this.donationAddress}>
           ${this.cryptoDropdown()}
         </mwc-select>
         <mwc-select outlined label="Currency" id="currency"
@@ -114,8 +139,16 @@ class CpwcCryptoDropdowns extends LitElement {
     const selectedText = evt.target.selectedText.toLowerCase()
     this.currentCurrency = selectedText
     cpwc_addresses.changeAddressesCurrencyAmount(this.currentCurrenciesPrice[selectedText])
-    cpwc_addresses.fiat = selectedText.toUpperCase();
-    cpwc_addresses.update();
+    cpwc_addresses.fiat = selectedText.toUpperCase()
+    cpwc_addresses.update()
+  }
+
+  donationAddress() {
+    const cryptoObject = this.returnCryptoObject()
+    const address = this.donationAddresses[cryptoObject.sym]
+    const cryptoName = cryptoObject.name
+    document.querySelector('#app__donation span').innerText = `Donations for ${cryptoName} Appreciated!`
+    document.querySelector('#app__donation .app__donation').innerText = address
   }
 
   returnCryptoObject() {
