@@ -169,6 +169,7 @@ class CpwcAddresses extends LitElement {
       return true;
     } else {
       alert('Please enter a valid address');
+      document.getElementById('input-address').value = ''
       return false;
     }
   }

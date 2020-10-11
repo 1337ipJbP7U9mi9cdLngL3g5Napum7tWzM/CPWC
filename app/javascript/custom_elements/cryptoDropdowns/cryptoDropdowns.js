@@ -144,6 +144,7 @@ class CpwcCryptoDropdowns extends LitElement {
   }
 
   donationAddress() {
+    document.getElementsByTagName('cpwc-addresses')[0].removeAllAddresses()
     const cryptoObject = this.returnCryptoObject()
     const address = this.donationAddresses[cryptoObject.sym]
     const cryptoName = cryptoObject.name
