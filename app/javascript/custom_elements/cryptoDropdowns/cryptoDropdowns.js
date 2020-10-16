@@ -140,14 +140,16 @@ class CpwcCryptoDropdowns extends LitElement {
     this.currentCurrency = selectedText
     cpwc_addresses.changeAddressesCurrencyAmount(this.currentCurrenciesPrice[selectedText])
     cpwc_addresses.fiat = selectedText.toUpperCase()
-    cpwc_addresses.update()
   }
 
-  donationAddress() {
+  donationAddress(evt) {
+    const cpwc_addresses = document.getElementsByTagName('cpwc-addresses')[0]
+    const selectedText = evt.target.selectedText
     document.getElementsByTagName('cpwc-addresses')[0].removeAllAddresses()
     const cryptoObject = this.returnCryptoObject()
     const address = this.donationAddresses[cryptoObject.sym]
     const cryptoName = cryptoObject.name
+    cpwc_addresses.crypto = selectedText
     document.querySelector('#app__donation span').innerText = `Donations for ${cryptoName} Appreciated!`
     document.querySelector('#app__donation .app__donation').innerText = address
   }

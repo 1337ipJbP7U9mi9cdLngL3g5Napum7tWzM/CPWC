@@ -6,7 +6,9 @@ class CpwcAddresses extends LitElement {
   static get properties() {
     return {
       addresses: {type: Array},
-      checkedBalanceState: {type: String}
+      checkedBalanceState: {type: String},
+      fiat: {type: String},
+      crypto: {type: String}
     }
   }
 
@@ -15,6 +17,7 @@ class CpwcAddresses extends LitElement {
     this.addresses = [];
     this.checkedBalanceState = "false";
     this.fiat = 'USD';
+    this.crypto = 'Bitcoin';
   }
 
   totalsOnChecked() {
@@ -27,7 +30,7 @@ class CpwcAddresses extends LitElement {
             <span>${this.totalAddresses()}</span>
           </div>
           <div class="address-totals__center">
-            <span class="tea_color">Crypto Amount:</span>
+            <span class="tea_color">${this.crypto} Amount:</span>
             <span>${this.totalCryptoAmount()}</span>
           </div>
           <div class="address-totals__center">
@@ -45,7 +48,7 @@ class CpwcAddresses extends LitElement {
             <span class="tea_color">Addresses:</span>
             <span>${this.totalAddresses()}</span>
           </div>
-          <span class="tea_color">Crypto Amount: </span>
+          <span class="tea_color">${this.crypto} Amount: </span>
           <span class="tea_color">${this.fiat} Amount: </span>
           <span class="remove" @click=${this.removeAllAddresses}>Remove All</span>
           <hr>

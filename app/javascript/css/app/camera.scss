@@ -1,8 +1,14 @@
-// #reader {
-//   display: grid;
-//   grid-template-columns: 1fr;
-//   justify-items: center;
-// }
+#reader {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  width: 80%;
+}
+
+#reader__dashboard {
+  display: grid;
+  justify-content: center;
+}
 
 #reader__dashboard_section_swaplink {
   text-decoration: none !important;
