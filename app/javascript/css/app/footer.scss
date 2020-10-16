@@ -31,5 +31,23 @@
 
   .app__donation {
     margin-top: 0.5em;
+    position: relative;
+
+    &:hover {
+      color: #d4e6b5ff;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    &:hover::before {
+      content: 'Click to Copy';
+      position: absolute;
+      top: -2.5em;
+      left: 0;
+      background-color: #464c51;
+      border-radius: 0.5em;
+      color: white;
+      padding: 0.5em;
+    }
   }
 }

@@ -13,5 +13,8 @@ export default class extends Controller {
     copy(e.target.innerText,  {
       format: 'text/plain'
     });
+
+    document.getElementsByClassName('copy-modal')[0].classList.add('open')
+    setTimeout(() => { document.getElementsByClassName('copy-modal')[0].classList.remove('open') }, 3000);
   }
 }
