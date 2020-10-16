@@ -10,15 +10,16 @@ export default class extends Controller {
   startQrCode() {
     // console.log('try to start qrcode')
     this.html5QrcodeScanner = new Html5QrcodeScanner(
-      "reader", { fps: 10, qrbox: 300, aspectRation: 1.77778 }, /* verbose= */ true);
+      "reader", { fps: 10, qrbox: 300, aspectRatio: 1.777778 }, /* verbose= */ true);
     this.html5QrcodeScanner.render(this.onScanSuccess, this.onScanFailure);
     document.getElementById('reader__dashboard_section_swaplink').setAttribute('href', 'javascript:void(0)')
   }
 
   onScanSuccess(qrMessage) {
-    console.log(qrMessage)
   	// handle the scanned code as you like
-    this.html5QrcodeScanner.clear();
+    // const stop = document.getElementById('reader__dashboard_section_csr').lastChild.lastChild
+    // stop.click()
+    // this.html5QrcodeScanner.clear();
     console.log(`QR matched = ${qrMessage}`);
     const cpwc_addresses = document.getElementsByTagName('cpwc-addresses')[0]
     cpwc_addresses.addAddress(qrMessage)
@@ -26,7 +27,7 @@ export default class extends Controller {
 
   onScanFailure(error) {
   	// handle scan failure, usually better to ignore and keep scanning
-  	console.warn(`QR error = ${error}`);
+  	// console.warn(`QR error = ${error}`);
   }
 
 }

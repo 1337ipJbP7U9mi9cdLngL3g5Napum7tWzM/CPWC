@@ -15,8 +15,9 @@ export default class extends Controller {
   closeModal(e) {
     if(e.target.classList[0] === "camera-modal") {
       this.element.style.display = "none"
-      const stop = document.getElementById('reader__dashboard_section_csr').lastChild.lastChild
-      stop.click()
+      // const stop = document.getElementById('reader__dashboard_section_csr').lastChild.lastChild
+      // stop.click()
+      // Html5QrcodeScanner.clear()
     }
   }
 
