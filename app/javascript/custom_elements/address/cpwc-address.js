@@ -1,4 +1,5 @@
 import { LitElement, html } from 'lit-element';
+import copy from 'copy-to-clipboard';
 
 class CpwcAddress extends LitElement {
 
@@ -21,6 +22,10 @@ class CpwcAddress extends LitElement {
         <hr>
       </div>
     `;
+  }
+
+  copyToClipboard(e) {
+    console.log(hi, e)
   }
 
   openModal() {
