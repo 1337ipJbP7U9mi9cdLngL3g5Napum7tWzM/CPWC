@@ -14,7 +14,9 @@ export default class extends Controller {
       format: 'text/plain'
     });
 
-    document.getElementsByClassName('copy-modal')[0].classList.add('open')
-    setTimeout(() => { document.getElementsByClassName('copy-modal')[0].classList.remove('open') }, 3000);
+    const copyModal = document.getElementsByClassName('copy-modal')[0]
+    copyModal.classList.add('open')
+    setTimeout(() => { copyModal.classList.remove('open') }, 3000);
   }
+
 }

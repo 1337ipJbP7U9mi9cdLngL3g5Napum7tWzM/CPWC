@@ -15,17 +15,35 @@ class CpwcAddress extends LitElement {
   render() {
     return html`
       <div class="address">
-        <span class="address__address" @click=${this.openModal}>${this.address}</span>
+        <span class="address__address" @click=${this.showButtons}>${this.address}</span>
         <span class="address__crypto">${this.crypto_amount}</span>
         <span class="address__crypto">${this.fiat_amount}</span>
         <span class="remove" @click=${this.removeAddress}>Remove Me</span>
+        <div class="address__buttons">
+          <span class="address__qr" @click=${this.openModal}>
+            <button class="btns"><i class="fas fa-qrcode"></i></button>
+          </span>
+          <span class="address__copy" @click=${this.copyToClipboard}>
+            <button class="btns"><i class="far fa-copy"></i></button>
+          </span>
+        </div>
         <hr>
       </div>
     `;
   }
 
+  showButtons() {
+    this.querySelector('.address__buttons').classList.toggle('open')
+  }
+
   copyToClipboard(e) {
-    console.log(hi, e)
+    copy(this.address,  {
+      format: 'text/plain'
+    });
+
+    const copyModal = document.getElementsByClassName('copy-modal')[0]
+    copyModal.classList.add('open')
+    setTimeout(() => { copyModal.classList.remove('open') }, 3000);
   }
 
   openModal() {

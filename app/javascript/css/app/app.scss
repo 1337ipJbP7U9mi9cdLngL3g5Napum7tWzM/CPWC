@@ -105,11 +105,13 @@ $light-grey: #2d2d2d;
   display: grid;
   grid-template-areas: "address crypto fiat remove";
   grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr auto auto;
   padding: 0 2em;
   justify-items: center;
 
   hr {
     grid-column: 1/5;
+    grid-row: 3/4;
     width: 100%;
   }
 }
@@ -117,16 +119,82 @@ $light-grey: #2d2d2d;
 .address__address {
   position: relative;
 
-  &::before {
-    content: '';
-    width: 100%;
-    height: 100%;
+  &:hover {
+    color: #d4e6b5ff;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &:hover::before {
+    content: 'Click for Qrcode or Copy';
     position: absolute;
-    background-color: pink;
-    top: -1.3em;
+    top: -2.5em;
     left: 0;
+    background-color: #464c51;
+    border-radius: 0.5em;
+    color: white;
+    padding: 0.5em;
   }
 }
+
+.address__buttons {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 0%;
+  margin-top: 0;
+  transform: scale(1, 0);
+  transition: transform ease-in 250ms,
+              height ease-in 250ms,
+              margin-top ease-in 250ms,
+              display ease-in 250ms;
+
+  .address__qr {
+    font-size: 0.8em;
+    position: relative;
+
+    &:hover::before {
+      content: 'Click for Qrcode';
+      position: absolute;
+      top: -2.5em;
+      left: 0;
+      background-color: #464c51;
+      border-radius: 0.5em;
+      color: white;
+      padding: 0.5em;
+      white-space: nowrap;
+    }
+  }
+
+  .address__copy {
+    font-size: 0.8em;
+    position: relative;
+
+    &:hover::before {
+      content: 'Click to Copy';
+      position: absolute;
+      top: -2.5em;
+      left: 0;
+      background-color: #464c51;
+      border-radius: 0.5em;
+      color: white;
+      padding: 0.5em;
+      white-space: nowrap;
+    }
+  }
+}
+
+.address__buttons.open {
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  transform: scale(1, 1);
+  height: 100%;
+  margin-top: 0.3em;
+}
+
 
 .copy-modal {
   display: grid;
@@ -136,12 +204,12 @@ $light-grey: #2d2d2d;
 	justify-content: center;
 	width: 100%;
 
-  &>span {
+  span {
   	background-color: green;
   	padding: 1em;
   	border-radius: 1em;
   	margin-top: -4em;
-  	box-shadow: 0 0 0 #b5cab2;
+    box-shadow: 0 2px 10px #b5cab2;
     transform: scale(0, 0);
     transition: transform cubic-bezier(.62,-0.2,1,.26) 350ms,
                 margin-top ease-in-out 350ms;
@@ -150,8 +218,7 @@ $light-grey: #2d2d2d;
 
 .copy-modal.open {
 
-  &>span {
-    box-shadow: 0 2px 10px #b5cab2;
+  span {
     margin-top: 1em;
     transform: scale(1, 1);
   }
