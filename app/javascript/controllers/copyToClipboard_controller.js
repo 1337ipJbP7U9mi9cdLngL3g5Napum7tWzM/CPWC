@@ -6,7 +6,6 @@ export default class extends Controller {
   // static targets = [ "output" ]
 
   connect() {
-      console.log('copyToClipboard')
   }
 
   copy(e) {
