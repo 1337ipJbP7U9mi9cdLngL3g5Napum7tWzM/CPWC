@@ -154,6 +154,9 @@ class CpwcAddresses extends LitElement {
     if(valid) {
       this.addresses = [... this.addresses, {address: address}];
       document.getElementById('input-address').value = '';
+      return true
+    } else {
+      return false
     }
   }
 

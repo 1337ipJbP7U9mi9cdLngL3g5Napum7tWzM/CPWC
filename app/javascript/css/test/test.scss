@@ -1,0 +1,18 @@
+div.video {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    background-color: pink;
+    top: 80px;
+    left: 160px;
+    width: 320px;
+    height: 320px;
+    z-index: 100;
+  }
+}
+
+video {
+
+}
