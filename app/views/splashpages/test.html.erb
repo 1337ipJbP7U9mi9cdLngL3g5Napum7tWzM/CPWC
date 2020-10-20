@@ -1,9 +1,11 @@
 <%= javascript_pack_tag 'test' %>
 <%= stylesheet_pack_tag 'test' %>
 
-<div class="video" data-controller="qrcode-reader">
-  <video data-target="qrcode-reader.video"></video>
+<div class="camera-modal" data-controller="cameramodal">
+  <cpwc-qrreader data-target="cameramodal.scanner"></cpwc-qrreader>
 </div>
+
+<cpwc-addresses></cpwc-addresses>
 
 <div class="" id="canvas">
   <label>

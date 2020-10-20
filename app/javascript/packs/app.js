@@ -2,10 +2,11 @@
 // import 'css/post_show';
 // import 'css/post';
 import 'css/app/app.scss';
+import '@webcomponents/webcomponentsjs/webcomponents-loader.js';
 import '../custom_elements/cryptoDropdowns/cryptoDropdowns.js'
 import '../custom_elements/address/cpwc-address.js';
 import '../custom_elements/address/cpwc-addresses.js';
-import '@webcomponents/webcomponentsjs/webcomponents-loader.js';
+import 'custom_elements/qrReader/qrReader.js'
 import '@fortawesome/fontawesome-free/css/all.css';
 import '@fortawesome/fontawesome-free/js/all.js'
 // import '@material/mwc-button';
