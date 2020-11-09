@@ -2,11 +2,9 @@ import { LitElement, html } from 'lit-element';
 import QrScanner from "qr-scanner"
 import QrScannerWorkerPath from '!!file-loader!../../../../node_modules/qr-scanner/qr-scanner-worker.min.js';
 
-
-class CpwcQrReader extends LitElement {
-  static get properties() {
-    return {
-      open: {type: Boolean},
+class CpwcQrReader extends LitElement { 
+  static get properties() { 
+    return { open: {type: Boolean},
       qrScanner: {type: Object},
       result: {type: String}
     }
@@ -28,6 +26,10 @@ class CpwcQrReader extends LitElement {
   render() {
     return html`
       <div class="qr__scanner">
+        <div class="qr_buttons">
+          <button class="btns" @click=${this.startScanner}>Scan Qrcode with Camera</button>
+          <button class="btns" @click=${this.fileScanner}>Scan Image File</button>
+        </div>
         <div id="qr__scanner">
           <video @playing=${this.areaScanner} @pause=${this.areaScanner}></video>
         </div>
@@ -44,6 +46,10 @@ class CpwcQrReader extends LitElement {
 
   stopScanner() {
     this.qrScanner.stop()
+  }
+
+  fileScanner() {
+     console.log('hello world')
   }
 
   qrReaderSuccess(result) {

@@ -9,7 +9,6 @@ export default class extends Controller {
 
   openModal(e) {
     document.getElementsByClassName('camera-modal')[0].style.display = "block"
-    document.getElementsByTagName('cpwc-qrreader')[0].startScanner()
   }
 
   closeModal(e) {

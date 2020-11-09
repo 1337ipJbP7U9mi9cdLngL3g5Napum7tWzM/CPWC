@@ -1,45 +1,12 @@
-// #reader {
-//   display: grid;
-//   grid-template-columns: 1fr;
-//   justify-items: center;
-//   width: 80%;
-// }
-//
-// #reader__dashboard {
-//   display: grid;
-//   justify-content: center;
-// }
-//
-// #reader__dashboard_section {
-//   display: grid;
-//   justify-content: center;
-// }
-//
-// #reader__dashboard_section_swaplink {
-//   text-decoration: none !important;
-//   color: #fff;
-//
-//   &:hover {
-//     color: #d4e6b5ff;
-//   }
-// }
-//
-// #reader__dashboard_section_csr {
-//   width: 18em !important;
-// }
-//
-// #reader__filescan_input {
-//   width: 16em !important;
-// }
-//
-// #reader__dashboard_section_fsr {
-//   margin-right: 20px;
-// }
-
-
 div.qr__scanner {
   display: grid;
-  justify-content: center;
+  justify-items: center;
+
+  .qr_buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 #qr__scanner {
@@ -85,4 +52,8 @@ div.qr__scanner {
     margin-top: 1em;
     transform: scale(1, 1);
   }
+}
+
+cpwc-qrreader {
+  width: 100%;  
 }
