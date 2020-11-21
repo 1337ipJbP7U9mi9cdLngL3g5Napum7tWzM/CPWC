@@ -28,7 +28,10 @@ class CpwcQrReader extends LitElement {
       <div class="qr__scanner">
         <div class="qr_buttons">
           <button class="btns" @click=${this.startScanner}>Scan Qrcode with Camera</button>
-          <button class="btns" @click=${this.fileScanner}>Scan Image File</button>
+          <button class="btns" @click=${this.imageInput}>
+            Scan Image File 
+            <input class="hidden" @change=${this.fileScanner} type="file" id="file-scanner" accept="image/*"></input>
+          </button>
         </div>
         <div id="qr__scanner">
           <video @playing=${this.areaScanner} @pause=${this.areaScanner}></video>
@@ -48,12 +51,27 @@ class CpwcQrReader extends LitElement {
     this.qrScanner.stop()
   }
 
-  fileScanner() {
-     console.log('hello world')
+  imageInput(evt) {
+    document.getElementById("file-scanner").click()
+  }
+
+  fileScanner(evt) {
+    if (window.FileReader) {
+      const modal = document.getElementsByClassName('camera-modal')[0] 
+      QrScanner.scanImage(document.getElementById("file-scanner").files[0])
+        .then(result => {
+          document.getElementsByTagName('cpwc-addresses')[0].addAddress(result)
+          modal.style.display = "none"
+        })
+        .catch(error => console.log(error || 'No QR code found.'));
+        
+    } else {
+      alert('FileReader is not supported in the browser')
+    }
   }
 
   qrReaderSuccess(result) {
-    console.log('decoded qr code:', result)
+    // console.log('decoded qr code:', result)
 
     const cpwc_addresses = document.getElementsByTagName('cpwc-addresses')[0]
     if(cpwc_addresses.addAddress(result)) {

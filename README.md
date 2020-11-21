@@ -16,6 +16,7 @@ https://github.com/nimiq/qr-scanner
 TODO
 
 1: QrCode fileScanner implemented && Stop QrScanner button
+1.5: Spinner while api calls are going.
 2: PWA setup along with favicon image
 3: Get it on play store
 4: Get it on Kindle store

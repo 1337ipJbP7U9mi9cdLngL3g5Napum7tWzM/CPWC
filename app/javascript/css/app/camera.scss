@@ -7,6 +7,10 @@ div.qr__scanner {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
+  #file-scanner {
+    display: none;
+  }
 }
 
 #qr__scanner {
