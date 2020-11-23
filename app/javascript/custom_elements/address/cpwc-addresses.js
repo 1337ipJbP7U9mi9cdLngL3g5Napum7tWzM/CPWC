@@ -6,7 +6,7 @@ class CpwcAddresses extends LitElement {
   static get properties() {
     return {
       addresses: {type: Array},
-      checkedBalanceState: {type: String},
+      checkedBalanceState: {type: Boolean},
       fiat: {type: String},
       crypto: {type: String}
     }
@@ -15,7 +15,7 @@ class CpwcAddresses extends LitElement {
   constructor() {
     super();
     this.addresses = [];
-    this.checkedBalanceState = "false";
+    this.checkedBalanceState = true;
     this.fiat = 'USD';
     this.crypto = 'Bitcoin';
   }
@@ -80,14 +80,18 @@ class CpwcAddresses extends LitElement {
         <span class="check-address">
           <button class="btns" type="button" name="check" data-action="click->api#submitAddress"
             class="check-address">
-            Check Address
+            ${this.checkedBalanceState === true ? 'Check Balance' : 'Checking'}
           </button>
         </span>
         <input
           type="text"
           id="input-address"
           plaveholder="Please input Public Address"></input>
-        <span class="camera" data-controller="cameramodal"><button class="btns" data-action="click->cameramodal#openModal"><i class="fas fa-qrcode"></i></button></span>
+        <span class="camera" data-controller="cameramodal">
+          <button class="btns" data-action="click->cameramodal#openModal">
+            <i class="fas fa-qrcode"></i>
+          </button>
+        </span>
         <span class="enter-address">
           <button class="btns" @click=${this.submitAddress} type="button" name="enter">Enter Address</button>
         </span>
@@ -101,10 +105,12 @@ class CpwcAddresses extends LitElement {
     `;
   }
 
+
   totalAddresses() {
     const numberOfAddresses = this.addresses.length
     return numberOfAddresses
   }
+
 
   totalCryptoAmount() {
     let cryptoTotal = 0
@@ -118,6 +124,7 @@ class CpwcAddresses extends LitElement {
     return cryptoTotal
   }
 
+  
   totalFiatAmount() {
     let fiatAmount = 0
     this.addresses.map((address) => {
@@ -135,6 +142,7 @@ class CpwcAddresses extends LitElement {
   }
 
   // Button click to add Address
+  
   submitAddress() {
     const address = document.getElementById('input-address');
     this.addAddress(address.value.trim());

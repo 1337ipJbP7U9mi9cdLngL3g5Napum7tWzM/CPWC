@@ -10,7 +10,7 @@ export default class extends Controller {
   submitAddress(event) {
     const cpwc_addresses = document.getElementsByTagName('cpwc-addresses')[0]
     const addressesArray = cpwc_addresses.addresses.map(a => a.address)
-    cpwc_addresses.checkedBalanceState = "checking"
+    cpwc_addresses.checkedBalanceState = false 
 
     const cpwc_dropdowns = document.getElementsByTagName('cpwc-crypto-dropdowns')[0]
     const crypto = cpwc_dropdowns.returnCryptoObject();
@@ -42,7 +42,7 @@ export default class extends Controller {
     }).catch((error) => {
       console.log(error)
     }).then(() => {
-      cpwc_addresses.checkedBalanceState = "true"
+      cpwc_addresses.checkedBalanceState = true
     })
 
   }
