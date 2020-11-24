@@ -236,3 +236,18 @@ $light-grey: #2d2d2d;
     cursor: pointer;
   }
 }
+
+.spinner {
+  display: flex;
+  padding-bottom: 1em;
+  font-size: 2em;
+  justify-content: center;
+
+  svg {
+    margin-right: 1em;
+  }
+}
+
+.hidden {
+  display: none;
+}

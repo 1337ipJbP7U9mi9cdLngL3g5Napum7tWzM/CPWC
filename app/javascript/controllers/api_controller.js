@@ -19,26 +19,6 @@ export default class extends Controller {
     Promise.all(balancePromises).then((result) => {
       cpwc_dropdowns.currentCurrenciesPrice = result[0]
       cpwc_addresses.changeAddressesAmount(result[1])
-
-
-      // let i;
-      // for (i = 0; i < addressesArray.length; i++) {
-      //   const addressBalance = parseFloat(result[1][addressesArray[i]]);
-      //   const updateAddress = addressesArray[i];
-      //   const index = cpwc_addresses.addresses.findIndex(x => x.address === updateAddress);
-      //   const addressAttributes = {
-      //     crypto_amount: addressBalance.toString(),
-      //     fiat_amount: addressBalance * result[0][cpwc_dropdowns.currentCurrency]
-      //   };
-      //   cpwc_addresses.addresses = [
-      //     ...cpwc_addresses.addresses.slice(0, index),
-      //     Object.assign({}, cpwc_addresses.addresses[index], addressAttributes),
-      //     ...cpwc_addresses.addresses.slice(index + 1)
-      //   ]
-      // }
-
-
-
     }).catch((error) => {
       console.log(error)
     }).then(() => {

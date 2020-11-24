@@ -74,6 +74,18 @@ class CpwcAddresses extends LitElement {
     }
   }
 
+  checking() {
+    if(this.checkedBalanceState) {
+      return html`
+        <div class="spinner hidden"><i class="fas fa-cog fa-spin"></i></div>
+      `
+    } else {
+      return html`
+        <div class="spinner"><i class="fas fa-cog fa-spin"></i>Checking ...</div>
+      `
+    }
+  }
+
   render() {
     return html`
       <div @keyup=${this.onEnter} data-controller="api" class="input-addresses">
@@ -86,7 +98,7 @@ class CpwcAddresses extends LitElement {
         <input
           type="text"
           id="input-address"
-          plaveholder="Please input Public Address"></input>
+          placeholder="Please input Public Address"></input>
         <span class="camera" data-controller="cameramodal">
           <button class="btns" data-action="click->cameramodal#openModal">
             <i class="fas fa-qrcode"></i>
@@ -96,6 +108,7 @@ class CpwcAddresses extends LitElement {
           <button class="btns" @click=${this.submitAddress} type="button" name="enter">Enter Address</button>
         </span>
       </div>
+      ${this.checking()}
       <div id="addresses">
         ${this.totalsOnChecked()}
         ${this.addresses.map(address =>
