@@ -5,7 +5,7 @@ lock "~> 3.14.0"
 
 set :rvm1_ruby_version, "2.5.3"
 set :application, "CPWC"
-set :repo_url, "git@github.com:1337ipJbP7U9mi9cdLngL3g5Napum7tWzM/CPWC.git"
+set :repo_url, "git@github.com-1337:1337ipJbP7U9mi9cdLngL3g5Napum7tWzM/CPWC.git"
 set :rails_assets_groups, :web
 set :keep_releases, 2
 
