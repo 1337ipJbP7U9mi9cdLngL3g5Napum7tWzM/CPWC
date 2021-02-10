@@ -13,7 +13,7 @@
     "@rails/webpacker": "4.2.2",
     "@swyftx/api-crypto-address-validator": "^1.13.1",
     "@webcomponents/webcomponentsjs": "^2.4.4",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "blob.js": "^1.0.1",
     "copy-to-clipboard": "^3.3.1",
     "eslint": "^7.11.0",
