@@ -13,6 +13,7 @@ namespace :assets do
         # execute 'RAILS_ENV=production bin/rake assets:precompile'
         execute :bundle, 'exec rake assets:precompile'
         # execute 'gzip -9kvr ./public/'
+        # execute 'yarn install --check-files'
       end
     end
 

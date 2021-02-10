@@ -32,6 +32,7 @@ class CpwcAddresses extends LitElement {
             <div class="address-totals__center">
               <span class="tea_color">${this.crypto} Amount:</span>
               <span>${this.totalCryptoAmount()}</span>
+              <i>Hello World</i>
             </div>
             <div class="address-totals__center">
               <span class="tea_color">${this.fiat} Amount:</span>
